@@ -42,7 +42,7 @@ jobs:
       - run:
           name: Push Docker Image to Docker Hub
           command: |
-            export IMAGE_NAME=capstone-project
+            export IMAGE_NAME=capstoneproj
             docker build -t proj4vg/$IMAGE_NAME .
             docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD 
             docker push proj4vg/$IMAGE_NAME
