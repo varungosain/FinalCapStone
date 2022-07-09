@@ -44,10 +44,11 @@ jobs:
           name: Push Docker Image to Docker Hub yes
           command: |
             export IMAGE_NAME=capstone-project
-            docker build -t proj4vg/$IMAGE_NAME .
+            docker build -t $IMAGE_NAME .
+            docker tag $IMAGE_NAME proj4vg/$IMAGE_NAME:$IMAGE_NAME
             docker login -u varungosain -p Ironpen566$ docker.io
-            docker push proj4vg/$IMAGE_NAME
-     
+            docker push proj4vg/$IMAGE_NAME:$IMAGE_NAME
+ 
   deploy-application:
     docker:
       - image: 'cimg/python:3.10'
