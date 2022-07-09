@@ -44,7 +44,7 @@ jobs:
           command: |
             export IMAGE_NAME=capstone-project
             docker build -t proj4vg/$IMAGE_NAME .
-            docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD 
+            docker login -u varungosain@gmail.com -p Ironpen566$
             docker push proj4vg/$IMAGE_NAME
   deploy-application:
     docker:
