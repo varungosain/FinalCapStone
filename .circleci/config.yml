@@ -30,8 +30,8 @@ jobs:
       - run:
           name: Build Docker Image
           command: |
-            export IMAGE_NAME=capstone-project
-            docker build -t project4alina/$IMAGE_NAME .
+            export IMAGE_NAME=capstoneproj
+            docker build -t proj4vg/$IMAGE_NAME .
   docker-push:
     docker:
       - image: circleci/node:13.8.0
@@ -43,9 +43,9 @@ jobs:
           name: Push Docker Image to Docker Hub
           command: |
             export IMAGE_NAME=capstone-project
-            docker build -t project4alina/$IMAGE_NAME .
+            docker build -t proj4vg/$IMAGE_NAME .
             docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD 
-            docker push project4alina/$IMAGE_NAME
+            docker push proj4vg/$IMAGE_NAME
   deploy-application:
     docker:
       - image: 'cimg/python:3.10'
