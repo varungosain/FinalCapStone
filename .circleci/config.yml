@@ -47,7 +47,7 @@ jobs:
             docker build -t proj4vg/$IMAGE_NAME .
             docker login -u varungosain -p Ironpen566$
             docker tag proj4vg $dockerpath:latest
-            docker push $dockerpath:latest
+            docker push varungosain/proj4vg:tagname
             
   deploy-application:
     docker:
