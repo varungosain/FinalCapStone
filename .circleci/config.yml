@@ -30,7 +30,6 @@ jobs:
       - run:
           name: Build Docker Image
           command: |
-            export IMAGE_NAME=capstone-project
             docker build -t proj4vg/$IMAGE_NAME .
   docker-push:
     docker:
@@ -42,8 +41,9 @@ jobs:
       - run:
           name: Push Docker Image to Docker Hub yes
           command: |
+            export IMAGE_NAME=capstone-project
             docker login -u varungosain -p Ironpen566$ docker.io
-            docker push proj4vg/$IMAGE_NAME:latest
+            docker push proj4vg/$IMAGE_NAME
      
   deploy-application:
     docker:
