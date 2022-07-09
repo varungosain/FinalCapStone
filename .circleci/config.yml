@@ -48,7 +48,8 @@ jobs:
             docker login -u varungosain -p Ironpen566$
             dockerpath=varungosain/proj4vg
             docker tag proj4vg $dockerpath:latest
-            docker push $dockerpath:latest
+            docker push proj4vg/$IMAGE_NAME
+          
   deploy-application:
     docker:
       - image: 'cimg/python:3.10'
