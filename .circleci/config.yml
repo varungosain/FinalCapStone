@@ -42,11 +42,8 @@ jobs:
       - run:
           name: Push Docker Image to Docker Hub
           command: |
-            export IMAGE_NAME=capstone-project
-            dockerpath=varungosain/capstone
-            docker build -t capstone/$IMAGE_NAME .
             docker login -u varungosain -p Ironpen566$ docker.io
-            docker push capstone/$IMAGE_NAME
+            docker push proj4vg/$IMAGE_NAME
      
   deploy-application:
     docker:
