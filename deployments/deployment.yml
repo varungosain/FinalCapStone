@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
       - name: capstone-project
-        image: project4alina/capstone-project
+        image: proj4vg/capstone-project
         imagePullPolicy: Always
         resources:
           requests:
