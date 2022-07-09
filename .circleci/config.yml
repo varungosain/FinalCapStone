@@ -45,10 +45,11 @@ jobs:
           name: Push Docker Image to Docker Hub yes
           command: |
             export IMAGE_NAME=capstone-project
-            sudo docker build -t $IMAGE_NAME .
-            sudo docker tag $IMAGE_NAME proj4vg/$IMAGE_NAME:latest
-            sudo docker login -u varungosain -p Ironpen566$ docker.io
-            sudo docker push proj4vg/$IMAGE_NAME:latest
+            docker build -t capstone-project .
+            docker image ls
+            docker tag capstone-project:latest varungosain/proj4vg:coolapp
+            docker login -u varungosain -p Ironpen566$ docker.io
+            docker push varungosain/proj4vg:coolapp
  
   deploy-application:
     docker:
