@@ -46,7 +46,7 @@ jobs:
             dockerpath=varungosain/proj4vg
             docker build -t proj4vg/$IMAGE_NAME .
             docker login -u varungosain -p Ironpen566$
-            docker push proj4vg/$IMAGE_NAME
+            # docker push proj4vg/$IMAGE_NAME
           
             
   deploy-application:
