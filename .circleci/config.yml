@@ -30,7 +30,9 @@ jobs:
       - run:
           name: Build Docker Image
           command: |
+            export IMAGE_NAME=capstone-project
             docker build -t proj4vg/$IMAGE_NAME .
+  
   docker-push:
     docker:
       - image: circleci/node:13.8.0
