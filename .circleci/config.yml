@@ -40,7 +40,7 @@ jobs:
       - setup_remote_docker:
           version: 19.03.13
       - run:
-          name: Push Docker Image to Docker Hub
+          name: Push Docker Image to Docker Hub yes
           command: |
             docker login -u varungosain -p Ironpen566$ docker.io
             docker push proj4vg/$IMAGE_NAME:latest
