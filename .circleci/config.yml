@@ -45,7 +45,7 @@ jobs:
             export IMAGE_NAME=capstone-project
             dockerpath=varungosain/proj4vg
             docker build -t proj4vg/$IMAGE_NAME .
-            docker login -u varungosain
+            docker login -u varungosain -p Ironpen566$
             docker tag proj4vg $dockerpath:latest
             docker push $dockerpath:latest
             
