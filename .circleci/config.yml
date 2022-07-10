@@ -42,7 +42,7 @@ jobs:
       - setup_remote_docker:
           version: 19.03.13
       - run:
-          name: Push Docker Image to Docker Hub yes
+          name: Push Docker Image to Docker Hub 
           command: |
             export IMAGE_NAME=capstone-project
             docker build -t capstone-project .
