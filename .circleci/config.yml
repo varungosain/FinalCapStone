@@ -17,7 +17,7 @@ jobs:
       - run:
           name: Run Lint
           command: |
-            hadolint -a Dockerfile
+            hadolint Dockerfile
   docker-build:
     docker:
       - image: circleci/node:13.8.0
