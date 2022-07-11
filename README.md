@@ -1,21 +1,29 @@
 # FinalCapStone
 
-Github Repo Link: 
+Github Repo Link:  https://github.com/varungosain/FinalCapStone
 
-In this project I have used CircleCI to implement CI/CD I have:
+In this project I have used CircleCI to implement CI/CD I have undertaken-
 
-Lint run
+--> Failed lint run
 
-Built a docker image
+--> Successful Lint run
 
-Pushed the image to my personal docker repository
+--> Built a docker image
 
-Created a kubernetes (EKS) cluster in AWS
+--> Pushed the image to my personal docker repository
 
-Deployed the docker container application to this cluster
+--> Created a kubernetes (EKS) cluster in AWS
 
-Tested the application
+--> Deployed the docker container application to this cluster
 
-Delete the cluster following successful execution
+--> Tested the application
 
-Screenshots Included: Failed Lint Successful Lint Image Pushed to Docker Repo EC2 Instances CircleCI Pipeline
+--> Delete the cluster following successful execution
+
+Screenshots Included: 
+
+1) Failed Lint 
+2) Successful Lint 
+3) Image Pushed to Docker Repo ( 2 screenshots)
+4) EC2 Instances ( 2 screenshots)
+5) CircleCI Pipeline
