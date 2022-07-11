@@ -102,19 +102,19 @@ workflows:
           requires:
             - docker-build
       - aws-eks/create-cluster:
-          cluster-name: capstone-project
+          cluster-name: capstone-project-1
           requires:
             - docker-push
       - deploy-application:
-          cluster-name: capstone-project
+          cluster-name: capstone-project-1
           requires:
            - aws-eks/create-cluster
       - test-cluster:
-          cluster-name: capstone-project
+          cluster-name: capstone-project-1
           requires:
             - aws-eks/create-cluster
             - deploy-application
       - aws-eks/delete-cluster:
-          cluster-name: capstone-project
+          cluster-name: capstone-project-1
           requires:
             - test-cluster
