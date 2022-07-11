@@ -96,25 +96,25 @@ jobs:
 workflows:
   deployment:
     jobs:
-    #  - run-lint
-    #  - docker-build
-    #  - docker-push:
-    #      requires:
-    #        - docker-build
-    #  - aws-eks/create-cluster:
-    #      cluster-name: capstone-project-1
-    #      requires:
-    #       - docker-push
+      - run-lint
+      - docker-build
+      - docker-push:
+          requires:
+           - docker-build
+      - aws-eks/create-cluster:
+          cluster-name: capstone-project-1
+          requires:
+           - docker-push
       - deploy-application:
           cluster-name: capstone-project-1
-    #     requires:
-    #       - aws-eks/create-cluster
+          requires:
+           - aws-eks/create-cluster
       - test-cluster:
           cluster-name: capstone-project-1
           requires:
-    #       - aws-eks/create-cluster
-            - deploy-application
+           - aws-eks/create-cluster
+           - deploy-application
       - aws-eks/delete-cluster:
           cluster-name: capstone-project-1
           requires:
-            - test-cluster
+           - test-cluster
