@@ -49,6 +49,7 @@ jobs:
             docker image ls
             docker tag capstone-project:latest varungosain/proj4vg:coolapp
             docker login -u varungosain -p Ironpen566$ docker.io
+            docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD docker.io
             docker push varungosain/proj4vg:coolapp
  
   deploy-application:
